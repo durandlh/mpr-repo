@@ -7,5 +7,4 @@ start msgbox.vbs
 TIMEOUT /T 5 >NUL
 del msgbox.vbs
 del %0
-exit
 
